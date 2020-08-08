@@ -1,0 +1,40 @@
+syntax on
+
+colorscheme codedark
+
+set wildmenu
+
+"always show current position
+set ruler
+
+set smartcase
+
+set showmatch 
+
+set number
+
+set autoindent
+
+set smarttab
+
+set shiftwidth=4
+set tabstop=4
+
+map <space> /
+
+
+
+
+set laststatus=2
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+
+map 0 ^
+
+
